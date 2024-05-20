@@ -16,6 +16,10 @@ namespace Project.Repositories
             db.MakeupBrands.Add(makeupbrand);
             db.SaveChanges();
         }
+        public int GetLastBrandID()
+        {
+            return (from x in db.MakeupBrands select x.MakeupBrandID).ToList().LastOrDefault();
+        }
         public List<MakeupBrand> GetMakeupBrands()
         {
             return db.MakeupBrands.ToList();
@@ -23,7 +27,7 @@ namespace Project.Repositories
         public void RemoveMakeupBrandByID(int id)
         {
             MakeupBrand makeupbrand = db.MakeupBrands.Find(id);
-            db.MakeupBrands.Add(makeupbrand);
+            db.MakeupBrands.Remove(makeupbrand);
             db.SaveChanges();
         }
         public void UpdateMakeupBrandByID(int id, String MakeupBrandName, int MakeupBrandRating)
