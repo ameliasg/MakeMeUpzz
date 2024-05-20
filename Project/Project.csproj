@@ -90,9 +90,15 @@
       <DependentUpon>Models.edmx</DependentUpon>
       <LastGenOutput>Models.cs</LastGenOutput>
     </Content>
+    <Content Include="Views\BrandPage.aspx" />
     <Content Include="Views\HomePage.aspx" />
+    <Content Include="Views\InsertBrand.aspx" />
     <Content Include="Views\InsertPage.aspx" />
+    <Content Include="Views\InsertType.aspx" />
+    <Content Include="Views\TypePage.aspx" />
+    <Content Include="Views\UpdateBrand.aspx" />
     <Content Include="Views\UpdatePage.aspx" />
+    <Content Include="Views\UpdateType.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -116,6 +122,20 @@
     </Compile>
     <Compile Include="Layouts\Header.Master.designer.cs">
       <DependentUpon>Header.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\HeaderBrand.Master.cs">
+      <DependentUpon>HeaderBrand.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\HeaderBrand.Master.designer.cs">
+      <DependentUpon>HeaderBrand.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\HeaderType.Master.cs">
+      <DependentUpon>HeaderType.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\HeaderType.Master.designer.cs">
+      <DependentUpon>HeaderType.Master</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs">
       <DependentUpon>Models.tt</DependentUpon>
@@ -162,12 +182,26 @@
     <Compile Include="Repositories\TransactionDetailRepository.cs" />
     <Compile Include="Repositories\TransactionHeaderRepository.cs" />
     <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Views\BrandPage.aspx.cs">
+      <DependentUpon>BrandPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\BrandPage.aspx.designer.cs">
+      <DependentUpon>BrandPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\HomePage.aspx.designer.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InsertBrand.aspx.cs">
+      <DependentUpon>InsertBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\InsertBrand.aspx.designer.cs">
+      <DependentUpon>InsertBrand.aspx</DependentUpon>
     </Compile>
     <Compile Include="Views\InsertPage.aspx.cs">
       <DependentUpon>InsertPage.aspx</DependentUpon>
@@ -176,12 +210,40 @@
     <Compile Include="Views\InsertPage.aspx.designer.cs">
       <DependentUpon>InsertPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Views\InsertType.aspx.cs">
+      <DependentUpon>InsertType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\InsertType.aspx.designer.cs">
+      <DependentUpon>InsertType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\TypePage.aspx.cs">
+      <DependentUpon>TypePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\TypePage.aspx.designer.cs">
+      <DependentUpon>TypePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateBrand.aspx.cs">
+      <DependentUpon>UpdateBrand.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateBrand.aspx.designer.cs">
+      <DependentUpon>UpdateBrand.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Views\UpdatePage.aspx.cs">
       <DependentUpon>UpdatePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Views\UpdatePage.aspx.designer.cs">
       <DependentUpon>UpdatePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Views\UpdateType.aspx.cs">
+      <DependentUpon>UpdateType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Views\UpdateType.aspx.designer.cs">
+      <DependentUpon>UpdateType.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -193,6 +255,8 @@
       <DependentUpon>Models.edmx</DependentUpon>
     </Content>
     <Content Include="Layouts\Header.Master" />
+    <Content Include="Layouts\HeaderBrand.Master" />
+    <Content Include="Layouts\HeaderType.Master" />
     <None Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

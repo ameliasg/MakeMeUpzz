@@ -16,6 +16,11 @@ namespace Project.Repositories
             db.MakeupTypes.Add(makeuptype);
             db.SaveChanges();
         }
+        public int GetLastTypeID()
+        {
+            return (from x in db.MakeupTypes select x.MakeupTypeID).ToList().LastOrDefault();
+        }
+
         public List<MakeupType> GetMakeupTypes()
         {
             return db.MakeupTypes.ToList();
@@ -23,7 +28,7 @@ namespace Project.Repositories
         public void RemoveMakeupTypeByID(int id)
         {
             MakeupType makeuptype = db.MakeupTypes.Find(id);
-            db.MakeupTypes.Add(makeuptype);
+            db.MakeupTypes.Remove(makeuptype);
             db.SaveChanges();
         }
         public void UpdateMakeupTypeByID(int id, String MakeupTypeName)
