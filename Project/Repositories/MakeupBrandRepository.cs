@@ -1,4 +1,5 @@
-﻿using Project.Models;
+﻿using Project.Factories;
+using Project.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace Project.Repositories
         }
         public void RemoveMakeupBrandByID(int id)
         {
-            MakeupBrands makeupbrand = db.MakeupBrands.Find(id);
+            MakeupBrand makeupbrand = db.MakeupBrands.Find(id);
             db.MakeupBrands.Add(makeupbrand);
             db.SaveChanges();
         }
