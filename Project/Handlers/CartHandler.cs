@@ -10,9 +10,9 @@ namespace Project.Handlers
     public class CartHandler
     {
         CartRepository cartRepo = new CartRepository();
-        public void InsertCart(int cartId, int userId, int albumId, int qty)
+        public void InsertCart(int cartId, int userId, int makeupId, int qty)
         {
-            cartRepo.InsertCart(cartId, userId, albumId, qty);
+            cartRepo.InsertCart(cartId, userId, makeupId, qty);
         }
 
         public List<Cart> GetUserCart(int userId)

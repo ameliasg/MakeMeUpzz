@@ -102,6 +102,11 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\CartController.cs" />
+    <Compile Include="Controller\MakeupBrandController.cs" />
+    <Compile Include="Controller\MakeupController.cs" />
+    <Compile Include="Controller\MakeupTypeController.cs" />
+    <Compile Include="Controller\UserController.cs" />
     <Compile Include="Factories\CartFactory.cs" />
     <Compile Include="Factories\MakeupBrandFactory.cs" />
     <Compile Include="Factories\MakeupFactory.cs" />

@@ -25,7 +25,7 @@ namespace Project.Handlers
             return brandRepo.GetMakeupBrands();
         }
 
-        public MakeupBrand GetMakeupBrand(int id)
+        public MakeupBrand GetMakeupBrandByID(int id)
         {
             return brandRepo.GetMakeupBrandByID(id);
         }
