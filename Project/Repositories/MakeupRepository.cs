@@ -38,6 +38,10 @@ namespace Project.Repositories
             Makeup makeup= db.Makeups.Find(id);
             return makeup;
         }
+        public List<Makeup> GetMakeupByBrandID(int id)
+        {
+            return (from x in db.Makeups where x.MakeupBrandID == id select x).ToList();
+        }
         public void UpdateMakeupByID(int id, String MakeupName, int MakeupPrice, int MakeupWeight, 
             int MakeupTypeID, int MakeupBrandID)
         {
