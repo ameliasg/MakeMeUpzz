@@ -1,0 +1,52 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HeaderAuthentication.master.cs" Inherits="Project.Layouts.HeaderAuthentication" %>
+
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <nav class="navbar">
+            <ul class="navbar-list">
+                <asp:Panel ID="loginPanelGuest" runat="server">
+                    <asp:Button ID="HomeBtn" runat="server" Text="Home" style="margin-right:10px" OnClick="HomeBtn_Click"/>
+                    <asp:Button ID="LoginBtn" runat="server" Text="Login" style="margin-right:10px" OnClick="LoginBtn_Click"/>
+                    <asp:Button ID="RegisterBtn" runat="server" Text="Register" style="margin-right:10px" OnClick="RegisterBtn_Click"/>
+                </asp:Panel>
+                <asp:Panel ID="loginPanelCustomer" runat="server">
+                    <asp:Button ID="Button1" runat="server" Text="Home" style="margin-right:10px" OnClick="Button1_Click"/>
+                    <asp:Button ID="Button2" runat="server" Text="Login" style="margin-right:10px" OnClick="Button2_Click"/>
+                    <asp:Button ID="Button3" runat="server" Text="Register" style="margin-right:10px" OnClick="Button3_Click"/>
+                </asp:Panel>
+                <asp:Panel ID="loginPanelAdmin" runat="server">
+                    <asp:Button ID="Button4" runat="server" Text="Home" style="margin-right:10px" OnClick="Button4_Click"/>
+                    <asp:Button ID="Button5" runat="server" Text="Login" style="margin-right:10px" OnClick="Button5_Click"/>
+                    <asp:Button ID="Button6" runat="server" Text="Register" style="margin-right:10px" OnClick="Button6_Click"/>
+                </asp:Panel>
+            </ul>
+        </nav>
+        <div class="position-relative bg-image bg-no-repeat w-100" style="background-image: url('../Storage/Additional/background.jpg'); background-size: cover;"">
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5);"></div>
+      <div class="container">
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="card p-4 w-75 h-75 justify-content-center" style="background-color: rgba(255, 255, 255, 0.85);">
+
+                    <div class ="flex flex-col justify-center item-center">
+                        <asp:ContentPlaceHolder ID="AuthForm" runat="server">
+
+                        </asp:ContentPlaceHolder>
+                    </div>
+            </div>
+         </div>
+    </div>      
+</div>
+
+<asp:ContentPlaceHolder ID="body" runat="server">
+
+</asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>

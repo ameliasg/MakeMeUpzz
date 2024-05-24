@@ -48,32 +48,35 @@ namespace Project.Controller
 
         public String Checkout()
         {
-            int userId = Convert.ToInt32(HttpContext.Current.Session["userId"].ToString());
-            
+            int userId = Convert.ToInt32(HttpContext.Current.Session["userId"]);
 
             List<Cart> carts = ch.GetUserCart(userId);
 
-            if (carts == null)
+            if (carts == null || carts.Count == 0)
             {
                 return "Cart is empty!";
             }
 
             DateTime currentDate = DateTime.Now;
-            String dateFormat = currentDate.ToString("yyyy-MM-dd");
 
-            thh.InsertTransactionHeader(id, userId, dateFormat, status);
+            // Define a unique ID for the transaction header if it's not auto-generated
+            int id = new Random().Next(1, 1000000); // Replace with appropriate logic
+
+            // Define the status for the transaction
+            string status = "Pending"; // Replace with appropriate status
+
+            thh.InsertTransactionHeader(id, userId, currentDate, status);
 
             int lastId = tdh.GetLastTHID();
 
-
-            for (int i = 0; i < carts.Count; i++)
+            foreach (var cart in carts)
             {
-                tdh.InsertTransactionDetail(lastId, carts[i].MakeupID, (int)carts[i].Quantity);
+                tdh.InsertTransactionDetail(lastId, cart.MakeupID, (int)cart.Quantity);
             }
 
             ch.ClearCart(userId);
 
             return "";
-        }
+        } 
     }
 }
