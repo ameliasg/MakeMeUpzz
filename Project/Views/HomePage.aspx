@@ -11,6 +11,7 @@
                 <asp:BoundField DataField="MakeupWeight" HeaderText="Weight" SortExpression="MakeupWeight" />
                 <asp:BoundField DataField="MakeupType.MakeupTypeName" HeaderText="Type" SortExpression="MakeupType.MakeupTypeName" />
                 <asp:BoundField DataField="MakeupBrand.MakeupBrandName" HeaderText="Brand" SortExpression="MakeupBrand.MakeupBrandName" />
+                <asp:BoundField DataField="MakeupBrand.MakeupBrandRating" HeaderText="Brand Rating" SortExpression="MakeupBrand.MakeupBrandRating" />
                 <asp:CommandField ButtonType="Button" HeaderText="Actions" ShowCancelButton="False" ShowDeleteButton="True" ShowEditButton="True" ShowHeader="True" />
             </Columns>
         </asp:GridView>
